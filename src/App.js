@@ -12,7 +12,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    if(!name || ! !email || !message){
+    if(!name || !email || !message){
       setError("All fields are required");
       return;
     }
@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <h1>Contact Form</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type='text'
           value={name}
